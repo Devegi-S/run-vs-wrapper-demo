@@ -1,0 +1,15 @@
+name: "Wrapper Action"
+
+inputs:
+  command:
+    description: "Command to run"
+    required: true
+
+runs:
+  using: "composite"
+  steps:
+    - name: Run command from input
+      run: |
+        echo "Running using WRAPPER"
+        ${{ inputs.command }}
+      shell: bash
