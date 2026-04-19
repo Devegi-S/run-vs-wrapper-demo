@@ -1,0 +1,20 @@
+name: Wrapper Example
+
+on:
+  push:
+
+jobs:
+  wrapper-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Run using wrapper
+        uses: ./.github/actions/wrapper
+        with:
+          command: |
+            echo "Installing..."
+            echo "Testing..."
+            echo "Done!"
