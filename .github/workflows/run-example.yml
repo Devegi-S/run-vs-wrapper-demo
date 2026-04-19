@@ -1,0 +1,16 @@
+name: Run Example
+
+on:
+  push:
+
+jobs:
+  run-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Run multiple commands directly
+        run: |
+          echo "Running using NORMAL run"
+          echo "Installing..."
+          echo "Testing..."
+          echo "Done!"
